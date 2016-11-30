@@ -1,0 +1,25 @@
+<md-card *ngIf='conv' class='conv-full'>
+    <md-card-title> {{conv.name}} </md-card-title>
+    <md-card-content>
+        <md-list>
+            <md-list-item *ngFor='let message of conv.messages'>
+                <img md-list-avatar [src]='message.avatar' />
+                <h3 md-line> {{message.username}} </h3>
+                <p md-line> {{message.text}} </p>
+            </md-list-item>
+        </md-list>
+
+        <p *ngIf='writable'>
+        <md-input type='text' class='full-width' placeholder='Message' [(ngModel)]='message'></md-input>
+        </p>
+        <p>
+        <button *ngIf='writable' md-raised-button color='primary' (click)='handleClick()'>
+            Send
+        </button>
+
+        <button md-raised-button [routerLink]='["../../"]' >
+            Cancel
+        </button>
+        </p>
+    </md-card-content>
+</md-card>

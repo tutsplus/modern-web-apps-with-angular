@@ -1,0 +1,16 @@
+<md-card>
+    <form #f='ngForm' (submit)='login(f.value)'>
+
+        <md-card-title> Login </md-card-title>
+
+        <md-card-content>
+        <p> <md-input type='text' name='username' placeholder='username' ngModel></md-input> </p>
+
+        <p> <md-input type='password' name='password' placeholder='password' ngModel></md-input> </p>
+        </md-card-content>
+
+        <md-card-actions>
+            <button md-raised-button color='primary' type='submit'> Log In </button>
+        </md-card-actions>
+    </form>
+</md-card>

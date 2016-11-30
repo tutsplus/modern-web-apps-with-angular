@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+md-toolbar .md-tool {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+md-toolbar img {
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+md-icon {
+    color: #757575;
+}
+
+.project-pair project-summary {
+    display: inline-block;
+    width: 49%;
+    float: left;
+}
+
+.project-pair project-summary:last-child {
+    margin: 1% 0 1% 1%;
+}
+
+.project-pair project-summary:first-child {
+    margin: 1% 1% 1% 0;
+}
+
+.new-project md-input, .new-project textarea {
+    width: 100%;
+}
+.new-project textarea {
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    height: 50px;
+}
+
+.conv {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.conv-full {
+    _border: 1px solid #ccc;
+    _background: #fff;
+    box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.15), 0 -0.5px 0 rgba(0, 0, 0, 0.15), 0.5px 0 0 rgba(0, 0, 0, 0.15), -0.5px 0 0 rgba(0, 0, 0, 0.15), 0 4px 7px rgba(0,0,0,0.15), 0px 0px 0px 1000px rgba(0,0,0,0.2);
+    _border-radius: 5px;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 100px;
+}
+
+.conv-full:hover {
+    box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.15), 0 -0.5px 0 rgba(0, 0, 0, 0.15), 0.5px 0 0 rgba(0, 0, 0, 0.15), -0.5px 0 0 rgba(0, 0, 0, 0.15), 0 4px 7px rgba(0,0,0,0.15), 0px 0px 0px 1000px rgba(0,0,0,0.2);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.avatar {
+    margin-right: 10px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.error {
+    padding: 5px;
+    border: 1px solid red;
+    color: red;
+    background: rgba(255,0,0,0.25);
+}

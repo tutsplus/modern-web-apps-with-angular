@@ -1,0 +1,17 @@
+<md-toolbar color='accent'>
+    <span class='md-tool'> Projector! </span>
+    <span class='md-tool'> <a routerLink='/home'> Home </a> </span>
+    <span class='md-tool'> <a routerLink='/projects'> Projects </a> </span>
+
+    <img *ngIf='user' [src]='user.avatar' />
+
+    <span class='md-tool' *ngIf='user'>
+        {{user.username}} |
+        <a href='#' (click)='logout()'> Log Out </a>
+    </span>
+
+</md-toolbar>
+
+<div class='container'>
+    <router-outlet></router-outlet>
+</div>

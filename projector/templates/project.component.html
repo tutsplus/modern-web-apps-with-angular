@@ -1,0 +1,21 @@
+<div *ngIf='project'>
+    <md-toolbar *ngIf='canWork'>
+        <button [routerLink]="['./conversations/new']" md-raised-button color='primary'>
+            New Conversation
+        </button>
+    </md-toolbar>
+
+    <md-card>
+        <md-card-title> {{project.name}} </md-card-title>
+        <md-card-subtitle> {{project.description}} </md-card-subtitle>
+        <md-card-content>
+            <a *ngFor='let conv of project.conversations'
+                class='conv'
+                [routerLink]='["./conversations", conv.id]'>
+                {{conv.name}}
+            </a>
+        </md-card-content>
+    </md-card>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,42 @@
+<md-card class='new-project'>
+    <md-card-title> New Project </md-card-title>
+    <md-card-content>
+        <form [formGroup]='form' (ngSubmit)='handler()'>
+        <p>
+        <md-input type='text' placeholder='Name' [formControl]='form.controls["name"]'></md-input>
+        </p>
+
+        <p>
+        <textarea placeholder='Description' [formControl]='form.controls["description"]'></textarea>
+        </p>
+
+        <div>
+            <label> Users: </label>
+            <ul>
+                <li *ngFor='let user of users'>
+                    <label>
+                        <md-checkbox
+                            [checked]='isSelected(user.username)'
+                            (change)='onSelected($event, user.username)'>
+                            {{user.username}}
+                        </md-checkbox>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <button type='submit' md-raised-button color='primary'>
+            Save
+        </button>
+
+        <p class='error' *ngIf='(submitted || name.dirty) && name.hasError("required")'>
+            Name field is required.
+        </p>
+
+        <p class='error' *ngIf='(submitted || name.dirty) && name.hasError("minlength")'>
+            Name field must be longer than 2 characters.
+        </p>
+
+        </form>
+    </md-card-content>
+</md-card>

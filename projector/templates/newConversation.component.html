@@ -1,0 +1,18 @@
+<md-card class='conv-full'>
+    <md-card-title> New Conversation </md-card-title>
+    <md-card-content>
+        <p>
+            <md-input class='full-width' type='text' placeholder='Name' [(ngModel)]='name'></md-input>
+        </p>
+
+        <p>
+            <button md-raised-button color='primary' (click)='handleClick()'>
+                Start Conversation
+            </button>
+
+            <button md-raised-button [routerLink]='["../../"]' >
+                Cancel
+            </button>
+        </p>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,9 @@
+<h2> Welcome! </h2>
+
+<p *ngIf='loggedIn'>
+    <a [routerLink]='["/projects"]'> View your projects. </a>
+</p>
+
+<p *ngIf='!loggedIn'>
+    <a [routerLink]='["/login"]'> Go to login form. </a>
+</p>
